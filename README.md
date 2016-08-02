@@ -1,4 +1,4 @@
-# ActiveRecordYAML Record 
+# ActiveRecordYAML 
 
 Flat-file YAML backing for Rails models
 

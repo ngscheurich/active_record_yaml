@@ -36,7 +36,7 @@ describe YRModel do
 
   describe ".data_filename" do
     it "returns the correct filename" do
-      filename = Rails.root.join("spec", "data", "yr_models.yml")
+      filename = Rails.root.join("config", "data", "yr_models.yml")
       expect(YRModel.data_filename).to eq filename
     end
   end

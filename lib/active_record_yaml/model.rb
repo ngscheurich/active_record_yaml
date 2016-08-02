@@ -28,8 +28,7 @@ module ActiveRecordYaml
     end
 
     def self.data_dir
-      dir = Rails.env == "test" ? "spec" : "config"
-      Rails.root.join(dir, "data")
+      Rails.root.join("config", "data")
     end
   end
 end

@@ -1,6 +1,6 @@
 # ActiveRecordYAML 
 
-Flat-file YAML backing for Rails models
+An easy to use, YAML-based record storage solution, with ActiveRecord-like features
 
 ---
 

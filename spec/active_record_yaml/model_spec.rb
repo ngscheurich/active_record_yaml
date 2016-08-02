@@ -1,7 +1,7 @@
 require "spec_helper"
 
 name = "YRModel"
-Object.const_set(name, Class.new(YamlRecord::Model))
+Object.const_set(name, Class.new(ActiveRecordYaml::Model))
 
 describe YRModel do
   before(:all) { create_yaml_data }

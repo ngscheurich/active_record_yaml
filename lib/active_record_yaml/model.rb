@@ -1,4 +1,4 @@
-module YamlRecord
+module ActiveRecordYaml
   class Model
     extend ActiveModel::Naming
 

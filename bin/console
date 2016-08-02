@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "yaml_record"
+require "active_record_yaml"
 
 require "pry"
 Pry.start

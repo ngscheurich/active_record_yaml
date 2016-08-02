@@ -18,13 +18,13 @@ describe YRModel do
 
   describe ".first" do
     it "returns the first record" do
-      expect(YRModel.first.name).to eq "The Fellowship of the Ring"
+      expect(YRModel.first.title).to eq "The Fellowship of the Ring"
     end
   end
 
   describe ".last" do
     it "returns the last record" do
-      expect(YRModel.last.name).to eq "The Return of the King"
+      expect(YRModel.last.title).to eq "The Return of the King"
     end
   end
 
@@ -41,15 +41,22 @@ describe YRModel do
     end
   end
 
+  describe "a missing method" do
+    it "returns the value for its key if it exists" do
+      titles = ["The Fellowship of the Ring", "The Two Towers", "The Return of the King"]
+      expect(YRModel.titles).to eq titles
+    end
+  end
+
   private
 
   def create_yaml_data
     data = <<YAML
-- name: "The Fellowship of the Ring"
+- title: "The Fellowship of the Ring"
   published: "July 29, 1954"
-- name: "The Two Towers"
+- title: "The Two Towers"
   published: "November 11, 1954"
-- name: "The Return of the King"
+- title: "The Return of the King"
   published: "October 20, 1955"
 YAML
     File.open(YRModel.data_filename, "w") { |f| f.write(data) }

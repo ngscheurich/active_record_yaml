@@ -23,6 +23,17 @@ module ActiveRecordYaml
       YAML.load(data).map { |x| OpenStruct.new(x) }
     end
 
+    def self.method_missing(m, *args, &block)
+      key = ActiveSupport::Inflector.singularize(m)
+      all.map(&:"#{key}")
+    rescue
+      super
+    end
+
+    def self.respond_to_missing?(m, include_private = false)
+      super
+    end
+
     def self.data_filename
       data_dir.join("#{model_name.plural}.yml")
     end

@@ -1,6 +1,6 @@
 # ActiveRecordYAML 
 
-ActiveRecordYAML is an easy to use, YAML-based record storage solution for Rails applications with an ActiveRecord-like query interface.
+ActiveRecordYAML is an easy to use, YAML-based database solution for Rails applications with an ActiveRecord-like query interface.
 
 ---
 
